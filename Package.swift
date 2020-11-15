@@ -19,25 +19,12 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "ConfigCat iOS",
-            dependencies: []),
+            name: "ConfigCat",
+            dependencies: [],
+            path: "."),
         .testTarget(
             name: "ConfigCat iOSTests",
-            dependencies: ["ConfigCat iOS"]),
-        .target(
-            name: "ConfigCat macOS",
-            dependencies: []),
-        .testTarget(
-            name: "ConfigCat macOSTests",
-            dependencies: ["ConfigCat macOS"]),
-        .target(
-            name: "ConfigCat tvOS",
-            dependencies: []),
-        .testTarget(
-            name: "ConfigCat tvOSTests",
-            dependencies: ["ConfigCat tvOS"]),
-        .target(
-            name: "ConfigCat watchOS",
-            dependencies: []),
+            dependencies: ["ConfigCat"],
+            path: "."),
     ]
 )
