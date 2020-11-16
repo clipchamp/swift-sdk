@@ -28,6 +28,10 @@ let package = Package(
         .target(
             name: "ConfigCatVersion",
             dependencies: [],
-            path: "Version"),
+            path: "Version",
+            exclude: [
+                "version.txt",
+                "LICENSE"
+            ]),
     ]
 )
